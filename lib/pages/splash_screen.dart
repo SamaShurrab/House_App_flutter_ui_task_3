@@ -4,6 +4,7 @@ import 'package:flutter_ui_task3/constants/paths.dart';
 import 'package:flutter_ui_task3/constants/string.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/circular_widget.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_button.dart';
+import 'package:flutter_ui_task3/pages/register_page.dart';
 
 class SplashScreen extends StatefulWidget {
   const SplashScreen({super.key});
@@ -64,6 +65,12 @@ class SplashScreenState extends State<SplashScreen> {
               fontColor: Colors.pinkAccent,
               fontSize: 15,
               fontWeight: FontWeight.w600,
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const RegisterPage()),
+                );
+              },
             ),
           ],
         ),
