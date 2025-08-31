@@ -48,14 +48,15 @@ class CustomTextFieldState extends State<CustomTextField> {
             borderRadius: BorderRadius.circular(20),
             splashColor: Colors.transparent,
             onTap: () {
-              widget.hintText == AppStrings.passwordHint
+              widget.hintText == AppStrings.strongPasswordHint ||
+                      widget.hintText == AppStrings.passwordHint
                   ? setState(() {
                       widget.isObscure = !widget.isObscure;
                     })
                   : widget.isObscure = false;
             },
             child: Icon(
-              widget.isObscure && widget.hintText == AppStrings.passwordHint
+              widget.isObscure && widget.hintText.contains("assword")
                   ? Icons.visibility_off_outlined
                   : widget.suffixIconData,
               color: AppColors.hintIconColor,
