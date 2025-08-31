@@ -105,7 +105,7 @@ class RegisterPageState extends State<RegisterPage> {
                       SizedBox(height: AppDimensions.heightBetweenTextField),
                       CustomTextField(
                         isObscure: true,
-                        hintText: AppStrings.passwordHint,
+                        hintText: AppStrings.strongPasswordHint,
                         suffixIconData: Icons.visibility_outlined,
                         textInputType: TextInputType.text,
                         validator: (password) {

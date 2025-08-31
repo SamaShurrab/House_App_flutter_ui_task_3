@@ -11,7 +11,7 @@ class AppStrings {
   static const String userNameHint = "Full name";
   static const String emailHint = "Valid email";
   static const String phoneNumberHint = "Phone number";
-  static const String passwordHint = "Strong password";
+  static const String strongPasswordHint = "Strong password";
   static const String termsAndConditions =
       "By checking the box you agree to our Terms and Conditions";
   static const String nextButtonText = "Next";
@@ -31,4 +31,13 @@ class AppStrings {
       r'^(?=.*[A-Z])(?=.*[a-z])(?=.*\d)(?=.*[!@#\$&*~]).{8,}$';
   static const String invalidPasswordMessage =
       "* Weak password: use 8 chars, uppercase, number & symbol";
+
+  // Login Page Strings
+  static const String loginTitle = "Welcome Back";
+  static const String loginDescription = "sign in to access your account";
+  static const String rememberMe = "Remember me";
+  static const String forgotPassword = "Forgot password?";
+  static const String newMember = "New member ?";
+  static const String registerNow = "Register now";
+  static const String passwordHint = "Password";
 }
