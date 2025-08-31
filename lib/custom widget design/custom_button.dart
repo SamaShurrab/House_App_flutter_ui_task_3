@@ -1,20 +1,16 @@
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  final String buttonText;
   final Color backgroundColor;
-  final double fontSize;
-  final Color fontColor;
-  final FontWeight fontWeight;
+  final Widget child;
   final void Function()? onPressed;
+  final OutlinedBorder? shape;
   const CustomButton({
     super.key,
-    required this.buttonText,
     required this.backgroundColor,
-    required this.fontSize,
-    required this.fontColor,
-    required this.fontWeight,
+    required this.child,
     required this.onPressed,
+    this.shape,
   });
 
   @override
@@ -23,20 +19,15 @@ class CustomButton extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 20),
       child: SizedBox(
         width: double.infinity,
-
         child: ElevatedButton(
           onPressed: onPressed,
-          style: ElevatedButton.styleFrom(backgroundColor: backgroundColor),
+          style: ElevatedButton.styleFrom(
+            backgroundColor: backgroundColor,
+            shape: shape,
+          ),
           child: Padding(
             padding: const EdgeInsets.symmetric(vertical: 8),
-            child: Text(
-              buttonText,
-              style: TextStyle(
-                fontSize: fontSize,
-                color: fontColor,
-                fontWeight: fontWeight,
-              ),
-            ),
+            child: child,
           ),
         ),
       ),

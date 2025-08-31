@@ -43,15 +43,17 @@ class SplashScreenState extends State<SplashScreen> {
             Text(
               AppStrings.welcomeStatement,
               style: TextStyle(
+                fontFamily: "Poppins",
                 color: Colors.white,
                 fontSize: 25,
-                fontWeight: FontWeight.w500,
+                fontWeight: FontWeight.w600,
               ),
             ),
             SizedBox(height: 10),
             Text(
               AppStrings.splashdescription,
               style: TextStyle(
+                fontFamily: "Poppins",
                 color: Colors.white70,
 
                 fontSize: 14,
@@ -60,17 +62,22 @@ class SplashScreenState extends State<SplashScreen> {
             ),
             SizedBox(height: 50),
             CustomButton(
-              buttonText: AppStrings.getStartedBtn,
               backgroundColor: Colors.white,
-              fontColor: Colors.pinkAccent,
-              fontSize: 15,
-              fontWeight: FontWeight.w600,
               onPressed: () {
                 Navigator.push(
                   context,
                   MaterialPageRoute(builder: (context) => const RegisterPage()),
                 );
               },
+              child: Text(
+                AppStrings.getStartedBtn,
+                style: TextStyle(
+                  fontFamily: "Poppins",
+                  fontSize: 15,
+                  color: Colors.pinkAccent,
+                  fontWeight: FontWeight.w600,
+                ),
+              ),
             ),
           ],
         ),

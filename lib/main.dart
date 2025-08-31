@@ -6,7 +6,10 @@ void main() {
     MaterialApp(
       home: SplashScreen(),
       debugShowCheckedModeBanner: false,
-      theme: ThemeData(fontFamily: "Poppins"),
+      theme: ThemeData(
+        fontFamily: "Poppins",
+        scaffoldBackgroundColor: Colors.white,
+      ),
     ),
   );
 }
