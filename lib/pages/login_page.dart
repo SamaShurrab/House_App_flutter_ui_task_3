@@ -57,7 +57,7 @@ class LoginPageState extends State<LoginPage> {
                     children: [
                       CustomTextField(
                         isObscure: false,
-                        hintText: AppStrings.emailHint,
+                        hintText: AppStrings.enterYourEmail,
                         suffixIconData: Icons.email_outlined,
                         textInputType: TextInputType.emailAddress,
                         validator: (email) {

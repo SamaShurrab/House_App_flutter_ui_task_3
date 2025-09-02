@@ -40,6 +40,7 @@ class AppStrings {
   static const String newMember = "New member ?";
   static const String registerNow = "Register now";
   static const String passwordHint = "Password";
+  static const String enterYourEmail = "Enter your email";
 
   // Home Page Strings
   static const String appBarTitle = "Profile";
