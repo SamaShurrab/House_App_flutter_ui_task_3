@@ -44,20 +44,22 @@ class AppStrings {
 
   // Home Page Strings
   static const String appBarTitle = "Profile";
-  static const String jobTitle = "Job Manager";
+  static const String userName = "Adewale Taiwo";
+  static const String jobTitle = "House Manager";
   static const walletBalance = "Wallet Balance:";
   static const String walletBalanceNumber = "\$5046.57";
   static const String totalService = "Total Service";
+  static const String totalServiceNumber = "24";
   static const String masterCard = "Master Card";
   static const String masterCardNumber = "5999-XXXX";
-  static const String masterCardName = "Adewale T.e";
+  static const String masterCardName = "Adewale T.";
   static const String houses = "Houses";
-  static const String qddWorkers = "Add Workers";
+  static const String addWorkers = "Add\nWorkers";
   static const String all = "All";
   static const String services = "Services";
   static const String description = "Description";
   static const String electrical = "Electrical";
   static const String others = "Others";
   static const String feedbacks = "Feedbacks";
-  static const String feedback1 = "Perfect Work through all June month";
+  static const String feedback1 = "Perfect Work through all\nJune month";
 }

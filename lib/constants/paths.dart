@@ -1,4 +1,8 @@
 class Paths {
-  static const userImagePath = "assets/images/user.png";
-  static const signinUpImage = "assets/images/sigin_up.jpg";
+  static const String userImagePath = "assets/images/user.png";
+  static const String signinUpImage = "assets/images/sigin_up.jpg";
+  static const String electricalImage = "assets/images/electrical_man.png";
+  static const String othersImage = "assets/images/technical.png";
+  static const String job1 = "assets/images/job1.jpg";
+  static const String job2 = "assets/images/job2.jpg";
 }

@@ -9,4 +9,7 @@ class AppColors {
   static const Color checkboxColorButtonText = Color(0xffFF3951);
   static const Color checkboxColorButtonTextOp = Color(0x8ff40FF3951);
   static const Color checkBoxBorderColor = Color(0xffCBCBCB);
+  static const Color primaryColor = Color(0xffDF3222);
+  static const Color secondaryColor = Color(0xffFDEDEB);
+  static const Color descriptionTextColor=Color(0xff4D3C3C43);
 }
