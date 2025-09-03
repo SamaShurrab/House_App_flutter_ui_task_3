@@ -60,8 +60,6 @@ This project is a collection of user interfaces (UI) designed using Flutter, inc
 
 ### 1. Splash Screen 
 
-| Splash Screen |
-| --- | --- |
 | ![Splash Screen](assets/images/splash_screen.png) 
 
 ### 2. Login Page & Register PAge 
@@ -71,8 +69,7 @@ This project is a collection of user interfaces (UI) designed using Flutter, inc
 | ![Login Page](assets/images/login_page.png) | ![Register Page](assets/images/register_page.png) |
 
 ### 3. Home Page
-
-| Home Page |
+| Home Page 1 | Home Page 2 |
 | --- | --- |
 | ![Home Page 1](assets/images/home_page1.png) | ![Home Page 1](assets/images/home_page2.png) |
 
