@@ -12,9 +12,9 @@ This project is a collection of user interfaces (UI) designed using Flutter, inc
 - **assets**: Contains fonts and images.
 - **build**: Contains the compiled files.
 - **lib**: Contains the source code of the project.
-  - **constants**: Includes files like `colors.dart`, `dimens.dart`, `paths.dart`, `strings.dart`.
+  - **constants**: Includes files like `colors.dart`, `dimens.dart`, `paths.dart`, `strings.dart`,`collections.dart`.
   - **custom_widget_design**: Contains custom widgets like `circular_widget.dart`, `custom_button.dart`, `custom_card.dart`.
-  - **pages**: Contains the application pages like `home_page.dart`, `login_page.dart`, `register_page.dart`, `splash_screen.dart`.
+  - **pages**: Contains the application pages like `home_page.dart`, `login_page.dart`, `register_page.dart`, `splash_screen.dart`,`view_all_page.dart`.
   - **main.dart**: The main entry point of the app.
 
 ## Technologies Used 💻
@@ -48,13 +48,14 @@ This project is a collection of user interfaces (UI) designed using Flutter, inc
 - **Center**: To center elements inside their parent container.
 - **RichText, TextSpan**: To display rich text with different formatting.
 - **Snackbar**: For displaying temporary messages.
+- **GridView.builder**: For creating a scrollable, lazy-loaded grid of widgets dynamically.
 
 ## Key Features of the Project 🛠️
 
 - **Splash Screen**: Appears when the app is first launched, typically containing a logo or introductory information.
 - **Login & Register Pages**: Pages for user login and registration with input forms.
 - **Home Page**: The main page containing links to services and houses.
-- **Services & Houses Pages**: Pages that display services and house listings with interactive elements.
+- **View All Page**: Pages that display services and house listings with interactive elements.
 
 ## Project Images 📸
 
@@ -74,6 +75,12 @@ This project is a collection of user interfaces (UI) designed using Flutter, inc
 | --- | --- |
 | ![Home Page 1](assets/images/home_page1.png) | ![Home Page 1](assets/images/home_page2.png) |
 
+### 3. Services Page & Houses Page
+
+| Services Page | Houses Page |
+| --- | --- |
+| ![Services Page](assets/images/services_page.png) | ![Houses Page](assets/images/houses_page.png) |
+
 ## Project Structure 📁
 
 The project follows a clean and organized directory structure:
@@ -91,17 +98,21 @@ lib
  │   ├── colors.dart
  │   ├── dimens.dart
  │   ├── paths.dart
- │   └── strings.dart
+ |   ├── collections.dart
+ │   └── strings.dart    
  ├── custom_widget_design
  │   ├── circular_widget.dart
  │   ├── custom_button.dart
  │   ├── custom_card.dart
  │   ├── custom_checkbox.dart
  │   ├── custom_section_name.dart
+ |   ├── custom_section_houses.dart
+ |   ├── custom_section_services.dart
  │   └── custom_text_field.dart
  ├── pages
  │   ├── home_page.dart
  │   ├── login_page.dart
  │   ├── register_page.dart
+ |   ├── view_all_page.dart
  │   ├── splash_screen.dart
  └── main.dart
