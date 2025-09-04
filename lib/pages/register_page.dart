@@ -6,7 +6,6 @@ import 'package:flutter_ui_task3/constants/string.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_button.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_checkbox.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_text_field.dart';
-import 'package:flutter_ui_task3/pages/login_page.dart';
 
 class RegisterPage extends StatefulWidget {
   const RegisterPage({super.key});
@@ -191,11 +190,7 @@ class RegisterPageState extends State<RegisterPage> {
                         onPressed: () {
                           if (formKey.currentState!.validate() &&
                               CustomCheckboxState.isChecked == true) {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => LoginPage(),
-                              ),
-                            );
+                            Navigator.of(context).pushNamed("login");
                           } else {
                             ScaffoldMessenger.of(context).showSnackBar(
                               SnackBar(
@@ -243,9 +238,7 @@ class RegisterPageState extends State<RegisterPage> {
                     SizedBox(width: 5),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(builder: (context) => LoginPage()),
-                        );
+                        Navigator.of(context).pushNamed("login");
                       },
                       child: Text(
                         AppStrings.loginIn,

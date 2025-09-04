@@ -6,8 +6,6 @@ import 'package:flutter_ui_task3/constants/string.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_button.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_checkbox.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_text_field.dart';
-import 'package:flutter_ui_task3/pages/home_page.dart';
-import 'package:flutter_ui_task3/pages/register_page.dart';
 
 class LoginPage extends StatefulWidget {
   const LoginPage({super.key});
@@ -146,11 +144,7 @@ class LoginPageState extends State<LoginPage> {
                         ),
                         onPressed: () {
                           if (formKey.currentState!.validate()) {
-                            Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) => HomePage(),
-                              ),
-                            );
+                            Navigator.of(context).pushNamed("home");
                           }
                         },
                       ),
@@ -173,11 +167,7 @@ class LoginPageState extends State<LoginPage> {
                     SizedBox(width: 5),
                     InkWell(
                       onTap: () {
-                        Navigator.of(context).push(
-                          MaterialPageRoute(
-                            builder: (context) => RegisterPage(),
-                          ),
-                        );
+                        Navigator.of(context).pushNamed("register");
                       },
                       child: Text(
                         AppStrings.registerNow,
