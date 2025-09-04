@@ -62,4 +62,8 @@ class AppStrings {
   static const String others = "Others";
   static const String feedbacks = "Feedbacks";
   static const String feedback1 = "Perfect Work through all\nJune month";
+
+  // Services page strings
+  static const String carpenter = "Carpenter";
+  static const String plumber = "Plumber";
 }

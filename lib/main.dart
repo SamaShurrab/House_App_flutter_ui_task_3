@@ -7,6 +7,11 @@ void main() {
       home: SplashScreen(),
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.transparent,
+          surfaceTintColor: Colors.transparent,
+          elevation: 0,
+        ),
         fontFamily: "Poppins",
         scaffoldBackgroundColor: Colors.white,
       ),

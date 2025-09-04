@@ -1,44 +1,20 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_ui_task3/constants/collections.dart';
 import 'package:flutter_ui_task3/constants/colors.dart';
 import 'package:flutter_ui_task3/constants/dimens.dart';
 import 'package:flutter_ui_task3/constants/paths.dart';
 import 'package:flutter_ui_task3/constants/string.dart';
-import 'package:flutter_ui_task3/custom%20widget%20design/circular_widget.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_card.dart';
+import 'package:flutter_ui_task3/custom%20widget%20design/custom_section_houses.dart';
 import 'package:flutter_ui_task3/custom%20widget%20design/custom_section_name.dart';
+import 'package:flutter_ui_task3/custom%20widget%20design/custom_section_services.dart';
+import 'package:flutter_ui_task3/pages/view_all_page.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    List<String> housesName = [
-      AppStrings.addWorkers,
-      "Tobi\nLateef",
-      "Queen\nNeedle",
-      "Joan\nBlessing",
-      "Joan\nBlessing",
-      "Joan\nBlessing",
-      "Joan\nBlessing",
-      "Joan\nBlessing",
-      "Joan\nBlessing",
-      "Joan\nBlessing",
-      "Joan\nBlessing",
-    ];
-
-    List services = [
-      {
-        "servicesName": AppStrings.electrical,
-        "servicesImage": Paths.electricalImage,
-        "servicesDescripton": AppStrings.description,
-      },
-      {
-        "servicesName": AppStrings.others,
-        "servicesImage": Paths.othersImage,
-        "servicesDescripton": AppStrings.description,
-      },
-    ];
-    List feedbacks = [Paths.job1, Paths.job2];
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Colors.transparent,
@@ -222,7 +198,18 @@ class HomePage extends StatelessWidget {
                     ],
                   ),
                   SizedBox(height: AppDimensions.heightBetweenSections),
-                  CustomSectionName(sectionName: AppStrings.houses),
+                  CustomSectionName(
+                    sectionName: AppStrings.houses,
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ViewAllPage(sectionName: AppStrings.houses);
+                          },
+                        ),
+                      );
+                    },
+                  ),
                   SizedBox(
                     height: AppDimensions.heightBetweenSectionsAndContents,
                   ),
@@ -230,43 +217,11 @@ class HomePage extends StatelessWidget {
                     width: double.infinity,
                     height: AppDimensions.heightCardInformation,
                     child: ListView.builder(
-                      itemCount: 10,
+                      itemCount: Collections.housesName.length,
                       itemBuilder: (context, index) {
-                        return CustomCard(
-                          width: 110,
-                          height: 120,
-                          cardColor: Colors.white,
-                          widget: Column(
-                            mainAxisAlignment: MainAxisAlignment.center,
-                            children: [
-                              CircularWidget(
-                                height: 55,
-                                width: 55,
-                                color: index != 0
-                                    ? AppColors.secondaryColor
-                                    : AppColors.primaryColor,
-                                widget: Padding(
-                                  padding: const EdgeInsets.all(5.0),
-                                  child: ClipRRect(
-                                    borderRadius: BorderRadius.circular(50),
-                                    child: index != 0
-                                        ? Image.asset(Paths.userImagePath)
-                                        : Icon(Icons.add, color: Colors.white),
-                                  ),
-                                ),
-                              ),
-                              SizedBox(height: 10),
-                              Text(
-                                housesName[index],
-                                textAlign: TextAlign.center,
-                                style: TextStyle(
-                                  fontSize: 13,
-                                  fontWeight: FontWeight.w500,
-                                  color: Colors.black,
-                                ),
-                              ),
-                            ],
-                          ),
+                        return CustomSectionHouses(
+                          housesNameList: Collections.housesName,
+                          index: index,
                         );
                       },
                       shrinkWrap: true,
@@ -274,47 +229,28 @@ class HomePage extends StatelessWidget {
                     ),
                   ),
                   SizedBox(height: AppDimensions.heightBetweenSections),
-                  CustomSectionName(sectionName: AppStrings.services),
+                  CustomSectionName(
+                    sectionName: AppStrings.services,
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return ViewAllPage(
+                              sectionName: AppStrings.services,
+                            );
+                          },
+                        ),
+                      );
+                    },
+                  ),
                   ListView.builder(
                     itemCount: 2,
                     shrinkWrap: true,
                     physics: NeverScrollableScrollPhysics(),
                     itemBuilder: (context, index) {
-                      return CustomCard(
-                        width: 356,
-                        height: 93,
-                        cardColor: Colors.white,
-                        widget: Center(
-                          child: ListTile(
-                            leading: Image.asset(
-                              services[index]["servicesImage"],
-                              height: 60,
-                              width: 60,
-                            ),
-                            title: Text(
-                              services[index]["servicesName"],
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 20,
-                                color: Colors.black,
-                              ),
-                            ),
-                            subtitle: Text(
-                              services[index]["servicesDescripton"],
-                              style: TextStyle(
-                                fontWeight: FontWeight.w500,
-                                fontSize: 17,
-                                letterSpacing: -0.43,
-                                color: AppColors.descriptionTextColor,
-                              ),
-                            ),
-                            trailing: Icon(
-                              Icons.arrow_forward_rounded,
-                              size: 48,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ),
+                      return CustomSectionServices(
+                        servicesNameList: Collections.services,
+                        index: index,
                       );
                     },
                   ),
@@ -343,7 +279,7 @@ class HomePage extends StatelessWidget {
                                     AppDimensions.borderRadiusCustomCard,
                                   ),
                                   child: Image.asset(
-                                    feedbacks[index],
+                                    Collections.feedbacks[index],
                                     width: 270,
                                     height: 85,
                                     fit: BoxFit.fill,

@@ -4,7 +4,8 @@ import 'package:flutter_ui_task3/constants/string.dart';
 
 class CustomSectionName extends StatelessWidget {
   final String sectionName;
-  const CustomSectionName({super.key, required this.sectionName});
+  final void Function()? onTap;
+  const CustomSectionName({super.key, required this.sectionName, this.onTap});
 
   @override
   Widget build(BuildContext context) {
@@ -21,7 +22,7 @@ class CustomSectionName extends StatelessWidget {
         ),
         InkWell(
           splashColor: Colors.grey,
-          onTap: () {},
+          onTap: onTap,
           child: Text(
             AppStrings.all,
             style: TextStyle(

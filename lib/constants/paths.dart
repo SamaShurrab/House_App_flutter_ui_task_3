@@ -5,4 +5,6 @@ class Paths {
   static const String othersImage = "assets/images/technical.png";
   static const String job1 = "assets/images/job1.jpg";
   static const String job2 = "assets/images/job2.jpg";
+  static const String carpenter = "assets/images/carpenter.png";
+  static const String plumber = "assets/images/plumber.png";
 }
